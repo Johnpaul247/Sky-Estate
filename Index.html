@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Real Estate Home Page</title>
+</head>
+<body>
+  <!-- NAVIGATION BAR FOR DESKTOP -->
+   <nav class="flex justify-between md:px-[100px] md:py-[30px] max-md:hidden">
+    <a class="text-2xl font-bold text-blue-500" href="Index.html">SKY ESTATE</a>
+    <ul class="flex gap-8">
+      <li><a class="font-semibold hover:text-blue-600" href="Index.html">Home</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Pricing.html">Pricing</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Blog.html">Blog</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Contact.html">Contact</a></li>
+    </ul>
+    <button class="p-2 rounded-lg bg-blue-600 text-white font-semibold"><a href="/Pricing.html">Get Started</a></button>
+   </nav>
+
+   <!-- NAVIGATION BAR FOR MOBILE -->
+    <nav class="flex justify-between py-[20px] px-[10px] md:hidden">
+      <a class="font-bold text-2xl text-blue-500" href="Index.html">SKY ESTATE</a>
+      <div class="relative">
+        <button onclick="toggleMenu()" class="text-2xl font-semibold text-blue-500"><i class="fa fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR FOR MOBILE -->
+     <div id="menu" class="fixed top-0 right-0 h-[350px] w-64 px-4 transform translate-x-full transition-transform duration-300 md:hidden z-50 bg-blue-600 text-white">
+      <button onclick="toggleMenu()" class="absolute top-4 right-4 font-semibold text-3xl">&times;</button>
+      <ul class="flex flex-col mt-10 gap-4 text-white">
+        <li><a class="font-semibold hover:text-green-600" href="Index.html">Home</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Pricing.html">Pricing</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Blog.html">Blog</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Contact.html">Contact</a></li>
+      </ul>
+     </div>
+
+     <!-- HERO SECTION -->
+      <header>
+        <div class="flex justify-between gap-32 md:px-[100px] mt-8 max-md:flex-col max-md:gap-16">
+          <div class="flex flex-col gap-8 mt-4">
+            <h1 class="font-bold text-5xl max-w-[500px] leading-[55px] max-md:text-3xl max-md:px-2 text-blue-500">Let's Find a Home That's Perfect for You</h1>
+            <p class="max-w-[700px] max-md:px-2">Find your dream home, explore the best properties for sale and rent in top locations. Discover your perfect property, browse, compare, and connect with top real estate listings.</p>
+            <p class="font-semibold text-2xl max-md:px-2">Let's get started</p>
+            <div class="flex flex-col shadow-t-xl">
+              <div class="flex">
+                <button class="p-4 bg-blue-500 w-[150px] rounded-t-l-lg">BUY</button>
+                <button class="p-4 bg-blue-300 w-[150px]">SELL</button>
+                <button class="p-4 bg-blue-200 w-[150px] rounded-t-r-lg">RENT</button>
+              </div>
+              <div>
+                <div class=" flex justify-around p-4 border border-gray-200 shadow-xl gap-32 md:w-[450px] max-md:w-full">
+                  <p class="text-xl font-bold text-blue-500">(480) 555-0103</p>
+                  <button class="bg-blue-500 p-2 text-white rounded-lg"><a href="Contact.html">Call me back</a></button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div data-aos="fade-left">
+            <img class="rounded-t-full h-[500px] w-[700px] max-md:w-full border border-blue-500 border-[10px]" src="/Img/house2.jpeg" alt="house2">
+          </div>
+        </div>
+      </header>
+
+      <main class="py-8 bg-gray-200 md:px-[100px] md:my-16 ">
+        
+          <div class="flex justify-between gap-8 max-md:flex-wrap max-md:justify-center">
+            <img class="w-[200px]" src="/Img/airbnb2.png" alt="airbnb">
+            <img class="w-[200px]" src="/Img/booking2.png" alt="booking">
+            <img class="w-[200px]" src="/Img/home2.png" alt="home">
+            <img class="w-[200px]" src="/Img/trip2.png" alt="trip">
+          </div>
+        
+      </main>
+
+      <section class="md:py-8 md:px-[100px]">
+        <div class="flex justify-between gap-16 max-md:flex-wrap">
+
+          <div class="flex gap-4">
+            <div class="flex flex-col gap-4 max-md:hidden">
+              <img class="w-[200px] rounded-lg ml-[55px]" src="/Img/house3.jpeg" alt="">
+              <img class="w-[700px] h-[270px] rounded-lg" src="/Img/house10.jpeg" alt="">
+            </div>
+            <div>
+              <img class="h-[480px] w-[800px] rounded-lg max-md:border-blue-500 max-md:border-[10px]" src="/Img/sky6.jpeg" alt="">
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-6 max-md:p-4">
+            <p class="font-semibold text-blue-500 text-lg">OUR ADVANTAGES</p>
+            <h1 class="font-bold text-2xl">About Sky Estate</h1>
+            <p>We took of the space around so that nothing prevents you from enjoying nature and freedom, the territory of the complex will be closed for cars. Underground parking will be provided for cars.</p>
+            <p class="font-bold">Our complex has;</p>
+
+            <div class=" flex justify-between max-w-[400px]">
+              <div class="flex flex-col gap-6">
+                <p><i class="fa fa-check text-blue-500"></i> Underground Parking</p>
+                <p><i class="fa fa-check text-blue-500"></i> The Shops</p>
+                <p><i class="fa fa-check text-blue-500"></i> Sports Courts</p>
+                <p><i class="fa fa-check text-blue-500"></i> Coworking</p>
+              </div>
+
+              <div class="flex flex-col gap-6">
+                <p><i class="fa fa-check text-blue-500"></i> Laundry</p>
+                <p><i class="fa fa-check text-blue-500"></i> Playgrounds</p>
+                <p><i class="fa fa-check text-blue-500"></i> Great Pool</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <div class="py-16 px-2">
+        <div class="flex flex-col justify-center gap-4">
+          <p class="text-center font-semibold text-blue-500">OUR GALLERY</p>
+          <h1 class="text-center text-4xl font-bold">3D Renderings</h1>
+          <p class="text-center">There are so many variations of passages of lorem ipsum</p>
+        </div>
+
+        <div id="card-menu" class="flex justify-between gap-6 mt-16 max-md:flex-wrap max-md:justify-center">
+        
+        </div>
+      </div>
+      
+
+      <!-- ABOUT -->
+       <div class="md:px-[100px] py-[20px]">
+        <div id="card-container" class="grid grid-cols-3 gap-x-8 gap-y-8 max-md:grid-cols-1 max-md:px-4">
+
+          <div class="flex flex-col gap-4 shadow-lg rounded-lg p-4 border border-gray-200">
+           <i class="fa fa-bolt text-blue-500 text-5xl"></i>
+           <h1 class="font-bold text-2xl">Service Premises</h1>
+           <p>Our complex has office space and convenience stores on the ground floor. Ther's a lot of hate out there for a text.</p>
+          </div>
+          
+          <div class="flex flex-col gap-4 shadow-lg rounded-lg p-4 border border-gray-200">
+            <i class="fa fa-shield text-blue-500 text-5xl"></i>
+            <h1 class="font-bold text-2xl">Safety and Security</h1>
+            <p>Reliable round-the-clock surveilance by a security system using modern technologies, the villagers are out there with.</p>
+           </div>
+
+           <div class="flex flex-col gap-4 shadow-lg rounded-lg p-4 border border-gray-200">
+            <i class="fa fa-cloud text-blue-500 text-5xl"></i>
+            <h1 class="font-bold text-2xl">Environmental Solution</h1>
+            <p>We care about the environment which is why we use LED lighting and have a charging station for electric vehicles clients.</p>
+           </div>
+
+           <div class="flex flex-col gap-4 shadow-lg rounded-lg p-4 border border-gray-200">
+            <i class="fa fa-gift text-blue-500 text-5xl"></i>
+            <h1 class="font-bold text-2xl">Ease of Management</h1>
+            <p>You must buy an apartment, and a professional hotel operator will do the rest for you. That amounts to little more than garbled words.</p>
+           </div>
+
+           <div class="flex flex-col gap-4 shadow-lg rounded-lg p-4 border border-gray-200">
+            <i class="fa fa-plane text-blue-500 text-5xl"></i>
+            <h1 class="font-bold text-2xl">Guaranteed Income</h1>
+            <p>Guaranteed monthly income is pescribed in advance in the contract. True enough, but that's not all that it takes to get things.</p>
+           </div>
+
+           <div class="flex flex-col gap-4 shadow-lg rounded-lg p-4 border border-gray-200">
+            <i class="fa fa-code text-blue-500 text-5xl"></i>
+            <h1 class="font-bold text-2xl">Great Location</h1>
+            <p>A pledge of a secure rental of your apartment. A client that's unhappy for a reason is a problem, a client that's unhappy.</p>
+           </div>
+        </div>
+       </div>
+  
+
+       <section class="bg-blue-600 py-[50px] md:px-[120px] mt-16">
+        <div class="flex justify-between gap-32 max-md:flex-wrap">
+          <div>
+            <img class="w-[500px] rounded-full max-md:p-2" src="/Img/house0.jpeg" alt="">
+          </div>
+          <div class="flex flex-col gap-8 text-white max-w-[500px] md:mt-16 max-md: text-center">
+            <p class="font-semibold text-2xl">Plans and Prices</p>
+            <h1 class="text-5xl font-bold">Choose Your Apartment</h1>
+            <p class="text-lg">We follow the latest developments in the building materials and technologies market, use only safe materials from trusted manufacturers and carefully select each specialist</p>
+          </div>
+        </div>
+       </section>
+
+       <!-- INVESTMENT -->
+        <div class="md:px-[100px] py-[50px] ">
+          <p class="text-center font-bold text-blue-500 text-xl">Investment Stages</p>
+          <h1 class="text-center font-semibold text-3xl">All Stages Of Investment</h1>
+          <p class="text-center">There are so many variations of passages of investment</p>
+
+          <div id="investment-container" class="flex justify-between gap-16 mt-16 max-md:flex-wrap max-md:p-6"></div>
+
+          <div class="flex justify-between mt-16 max-md:flex-wrap max-md:gap-8 max-md:p-4">
+            <div>
+              <h1 class="font-bold text-blue-500 text-2xl">Have a Question?</h1>
+              <p>Call to us or leave your number, and we will call you</p>
+              <div class="flex flex-col">
+              <p>We are online 24/7</p>
+              <p class="font-bold">(480) 555-0103</p>
+              <button class="p-2 bg-blue-600 rounded-lg text-white text-xl"><a href="Contact.html">Call me back</a></button>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
+             <form action="#">
+               <input type="email" placeholder="Enter your email" class="p-2 rounded-md mb-4 w-full        text-gray-800 border border-gray-600"/>
+               <button class="bg-blue-600 text-white py-2 px-4 rounded-md w-full">
+                 Subscribe
+               </button>
+             </form>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- FOOTER -->
+         <footer class="bg-blue-500 md:px-[100px] py-[30px] rounded-t-[80px] max-md:px-[70px]">
+
+          <div class="flex justify-between text-white max-md:flex-col max-md:gap-8 max-md:">
+
+            <div class="flex flex-col">
+              <h1 class="text-2xl font-bold">SKY ESTATE</h1>
+              <p class="max-w-[500px]">Sky Estate is a trusted real estate firm offering a wide range of properties across the   continent. We specialize in residential, commercial, and investment properties, ensuring   personalized service and expert guidance.</p>
+              <div class="flex space-x-4">
+                <a href="#" class="text-lg"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="#" class="text-lg"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-lg"><i class="fa fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-lg"><i class="fa fa-linkedin fa-2x"></i></a>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h1 class="text-2xl font-bold">Quick Links</h1>
+              <a href="">About Us</a>
+              <a href="">Services</a>
+              <a href="">Pricing</a>
+              <a href="">Privacy Policy</a>
+            </div>
+
+            <div class="flex flex-col">
+              <h1 class="text-2xl font-bold">Contact Us</h1>
+              <p class="">123 Main Street, Suite 200, [City, State, Zip]</p>
+              <p class="">Phone: (123) 456-7890</p>
+              <p class="">Email: info@realestate.com</p>
+            </div>
+          </div>
+
+          <div class="text-center text-white mt-16">
+            <h1> &copy; Copyright 2024 Sky Estate. All rights reserved.</h1>
+          </div>
+         </footer>
+
+
+     <script src="Script.js"></script>
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+      AOS.init({
+        duration: 2000,
+        once: false,
+    
+      });
+    </script>
+     
+</body>
+</html>

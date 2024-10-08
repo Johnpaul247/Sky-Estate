@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Service Page</title>
+</head>
+<body>
+  
+<div class="flex justify-center mx-auto">
+  <button onclick="myFunction()" class="bg-blue-500 text-white p-2 rounded-lg text-center mt-16">Click</button>
+</div>
+
+<div class="flex justify-center mt-8 items-center">
+  <div id="message" class="flex flex-col hidden text-center  justify-center p-8 border border-gray-300 shadow-lg rounded-lg items-center">
+    <p>Welcome to JavaScript</p>
+    <button onclick="secFunction()" class="p-2 bg-blue-500 rounded-lg text-white w-fit">Close</button>
+  </div>
+</div>
+
+<div></div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById('message').classList.remove('hidden')
+}
+
+function secFunction() {
+  document.getElementById('message').classList.add('hidden')
+}
+
+</script>
+
+</body>
+</html>

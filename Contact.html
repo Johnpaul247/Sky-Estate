@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Contact Page</title>
+</head>
+<body>
+
+<!-- NAVIGATION BAR FOR DESKTOP -->
+<nav class="flex justify-between md:px-[100px] md:py-[30px] max-md:hidden">
+  <a class="text-2xl font-bold text-blue-500" href="Index.html">SKY ESTATE</a>
+  <ul class="flex gap-8">
+    <li><a class="font-semibold hover:text-blue-600" href="Index.html">Home</a></li>
+    <li><a class="font-semibold hover:text-blue-600" href="Pricing.html">Pricing</a></li>
+    <li><a class="font-semibold hover:text-blue-600" href="Blog.html">Blog</a></li>
+    <li><a class="font-semibold hover:text-blue-600" href="Contact.html">Contact</a></li>
+  </ul>
+  <button class="p-2 rounded-lg bg-blue-600 text-white font-semibold"><a href="/Pricing.html">Get Started</a></button>
+ </nav>
+
+ <!-- NAVIGATION BAR FOR MOBILE -->
+  <nav class="flex justify-between py-[20px] px-[10px] md:hidden">
+    <a class="font-bold text-2xl text-blue-500" href="Index.html">SKY ESTATE</a>
+    <div class="relative">
+      <button onclick="toggleMenu()" class="text-2xl font-semibold text-blue-500"><i class="fa fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR FOR MOBILE -->
+   <div id="menu" class="fixed top-0 right-0 h-[350px] w-64 px-4 transform translate-x-full transition-transform duration-300 md:hidden z-50 bg-blue-600 text-white">
+    <button onclick="toggleMenu()" class="absolute top-4 right-4 font-semibold text-3xl">&times;</button>
+    <ul class="flex flex-col mt-10 gap-4 text-white">
+      <li><a class="font-semibold hover:text-green-600" href="Index.html">Home</a></li>
+      <li><a class="font-semibold hover:text-green-600" href="Pricing.html">Pricing</a></li>
+      <li><a class="font-semibold hover:text-green-600" href="Blog.html">Blog</a></li>
+      <li><a class="font-semibold hover:text-green-600" href="Contact.html">Contact</a></li>
+    </ul>
+   </div>
+
+
+  <form class="w-full max-w-lg mx-auto mt- max-md:px-4">
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Full Name</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="name" type="text" placeholder="Your name">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="email" type="email" placeholder="Your email">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="phone" type="tel" placeholder="Your phone number">
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+      <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="message" rows="4" placeholder="Your message"></textarea>
+    </div>
+    <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+        Send
+      </button>
+    </div>
+  </form>
+
+
+  <div class="my-8">
+    <h2 class="text-4xl font-bold mb-2 text-center">Get in Touch</h2>
+    <div class="flex justify-center md:gap-32 max-md:flex-col max-md:p-2">
+      <div>
+        <p><strong>Phone:</strong> +234 814 442 6428</p>
+        <p><strong>Email:</strong> contact@skyestate.com</p>
+      </div>
+      <div>
+        <p><strong>Address:</strong> 152 Real Estate Avenue, Owerri, Nigeria</p>
+        <p><strong>Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="google-map my-8">
+    <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+
+  <div class="mt-10 max-md:p-4">
+    <h2 class="text-4xl font-bold text-center">Frequently Asked Questions</h2>
+    <div class="flex justify-center md:gap-16 md:px-[100px] max-md:flex-col">
+      <div class="my-4">
+        <h3 class="text-xl font-semibold">What services do you offer?</h3>
+        <p>We provide residential and commercial real estate services, including buying, selling, and leasing properties.</p>
+      </div>
+      <div class="my-4">
+        <h3 class="text-xl font-semibold">How can I schedule a property visit?</h3>
+        <p>You can schedule a property visit by calling us or filling out the contact form with your preferred date and time.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="cta-section mt-12 text-center">
+    <h2 class="text-2xl font-bold mb-4">Ready to Find Your Dream Home?</h2>
+    <a href="/Pricing.html" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700">View Listings</a>
+  </div>
+
+
+  <div class="px-[100px] mt-6">
+    <h3 class="text-lg font-bold">Follow Us</h3>
+    <div class="flex space-x-4">
+      <a href="#" class="text-blue-500"><i class="fa fa-facebook fa-2x"></i></a>
+      <a href="#" class="text-blue-500"><i class="fa fa-twitter fa-2x"></i></a>
+      <a href="#" class="text-blue-500"><i class="fa fa-instagram fa-2x"></i></a>
+      <a href="#" class="text-blue-500"><i class="fa fa-linkedin fa-2x"></i></a>
+    </div>
+  </div>
+
+  
+  <script src="Script.js"></script>
+</body>
+</html>
