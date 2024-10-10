@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR FOR DESKTOP -->
+  <nav class="flex justify-between md:px-[100px] md:py-[30px] max-md:hidden">
+    <a class="text-2xl font-bold text-blue-500" href="Index.html">SKY ESTATE</a>
+    <ul class="flex gap-8">
+      <li><a class="font-semibold hover:text-blue-600" href="Index.html">Home</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="About.html">About Us</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Pricing.html">Pricing</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Blog.html">Blog</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Contact.html">Contact</a></li>
+    </ul>
+    <button class="p-2 rounded-lg bg-blue-600 text-white font-semibold"><a href="/Pricing.html">Get Started</a></button>
+   </nav>
+
+   <!-- NAVIGATION BAR FOR MOBILE -->
+    <nav class="flex justify-between py-[20px] px-[10px] md:hidden">
+      <a class="font-bold text-2xl text-blue-500" href="Index.html">SKY ESTATE</a>
+      <div class="relative">
+        <button onclick="toggleMenu()" class="text-2xl font-semibold text-blue-500"><i class="fa fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR FOR MOBILE -->
+     <div id="menu" class="fixed top-0 right-0 h-[350px] w-64 px-4 transform translate-x-full transition-transform duration-300 md:hidden z-50 bg-blue-600 text-white">
+      <button onclick="toggleMenu()" class="absolute top-4 right-4 font-semibold text-3xl">&times;</button>
+      <ul class="flex flex-col mt-10 gap-4 text-white">
+        <li><a class="font-semibold hover:text-green-600" href="Index.html">Home</a></li>
+        <li><a class="font-semibold hover:text-blue-600" href="About.html">About Us</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Pricing.html">Pricing</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Blog.html">Blog</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Contact.html">Contact</a></li>
+      </ul>
+     </div>
+
+
+     <!-- Checkout Section -->
+    <section class="py-12">
+      <div class="container mx-auto max-w-xl bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold text-center mb-6">Complete Your Purchase</h2>
+
+          <!-- Selected Plan Summary -->
+          <div class="bg-gray-100 p-4 rounded-lg mb-6">
+              <h3 class="text-xl font-semibold">Selected Plan: <span id="planName" class="font-bold text-blue-600">Basic Plan</span></h3>
+              <p class="mt-2">Price: <span id="planPrice" class="text-blue-600">$500/month</span></p>
+          </div>
+
+          <!-- Payment Method Selection -->
+          <h3 class="text-xl font-semibold mb-4">Choose Your Payment Method</h3>
+          <div class="flex justify-between items-center mb-6 max-md:flex-wrap">
+              <label class="flex items-center">
+                  <input type="radio" name="paymentMethod" value="creditCard" checked class="form-radio h-5 w-5 text-green-600" onclick="showPaymentForm('creditCard')">
+                  <span class="ml-2 text-gray-700">Credit Card</span>
+              </label>
+              <label class="flex items-center">
+                  <input type="radio" name="paymentMethod" value="paypal" class="form-radio h-5 w-5 text-green-600" onclick="showPaymentForm('paypal')">
+                  <span class="ml-2 text-gray-700">PayPal</span>
+              </label>
+              <label class="flex items-center">
+                  <input type="radio" name="paymentMethod" value="googlePay" class="form-radio h-5 w-5 text-green-600" onclick="showPaymentForm('googlePay')">
+                  <span class="ml-2 text-gray-700">Google Pay</span>
+              </label>
+              <label class="flex items-center">
+                  <input type="radio" name="paymentMethod" value="applePay" class="form-radio h-5 w-5 text-green-600" onclick="showPaymentForm('applePay')">
+                  <span class="ml-2 text-gray-700">Apple Pay</span>
+              </label>
+          </div>
+
+          <!-- Payment Forms -->
+          <div id="creditCardForm" class="payment-form">
+              <form action="/submit-checkout" method="POST">
+                  <!-- Billing Information Form -->
+                  <div class="mb-6">
+                      <label class="block text-gray-700 font-medium mb-2">Full Name</label>
+                      <input type="text" name="fullName" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="Enter your full name">
+                  </div>
+
+                  <div class="mb-6">
+                      <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                      <input type="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="Enter your email">
+                  </div>
+
+                  <!-- Credit Card Payment Information -->
+                  <h3 class="text-xl font-semibold mb-4">Payment Information</h3>
+
+                  <div class="mb-6">
+                      <label class="block text-gray-700 font-medium mb-2">Card Number</label>
+                      <input type="text" name="cardNumber" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="1234 5678 9101 1121">
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                          <label class="block text-gray-700 font-medium mb-2">Expiry Date</label>
+                          <input type="text" name="expiryDate" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="MM/YY">
+                      </div>
+                      <div>
+                          <label class="block text-gray-700 font-medium mb-2">CVV</label>
+                          <input type="text" name="cvv" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="123">
+                      </div>
+                  </div>
+              </form>
+          </div>
+
+          <div id="paypalForm" class="payment-form hidden">
+              <p class="text-gray-700">You will be redirected to PayPal to complete your purchase.</p>
+              <button class="bg-blue-500 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-4">Pay with PayPal</button>
+          </div>
+
+          <div id="googlePayForm" class="payment-form hidden">
+              <p class="text-gray-700">Google Pay will process your transaction securely.</p>
+              <button class="bg-gray-900 text-white py-3 px-6 rounded-lg font-bold hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 mt-4">Pay with Google Pay</button>
+          </div>
+
+          <div id="applePayForm" class="payment-form hidden">
+              <p class="text-gray-700">Use Apple Pay to complete your transaction.</p>
+              <button class="bg-black text-white py-3 px-6 rounded-lg font-bold hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black mt-4">Pay with Apple Pay</button>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white p-6 text-center">
+      <p>Contact us: info@skyestate.com | +123-456-7890</p>
+      <p>&copy; 2024 Sky Estate Inc.</p>
+  </footer>
+
+  <script>
+      // Show the correct payment form based on user selection
+      function showPaymentForm(method) {
+          document.querySelectorAll('.payment-form').forEach(form => form.classList.add('hidden'));
+          document.getElementById(method + 'Form').classList.remove('hidden');
+      }
+  </script>
+  
+</body>
+</html>

@@ -14,6 +14,7 @@
   <a class="text-2xl font-bold text-blue-500" href="Index.html">SKY ESTATE</a>
   <ul class="flex gap-8">
     <li><a class="font-semibold hover:text-blue-600" href="Index.html">Home</a></li>
+    <li><a class="font-semibold hover:text-blue-600" href="About.html">About Us</a></li>
     <li><a class="font-semibold hover:text-blue-600" href="Pricing.html">Pricing</a></li>
     <li><a class="font-semibold hover:text-blue-600" href="Blog.html">Blog</a></li>
     <li><a class="font-semibold hover:text-blue-600" href="Contact.html">Contact</a></li>
@@ -30,10 +31,11 @@
   </nav>
 
   <!-- SIDEBAR FOR MOBILE -->
-   <div id="menu" class="fixed top-0 right-0 h-[350px] w-64 px-4 transform translate-x-full transition-transform duration-300 md:hidden z-50 bg-blue-600 text-white">
+   <div id="menu" class="fixed top-0 right-0 h-[100vh] w-full px-4 transform translate-x-full transition-transform duration-300 md:hidden z-50 bg-blue-600 text-white">
     <button onclick="toggleMenu()" class="absolute top-4 right-4 font-semibold text-3xl">&times;</button>
     <ul class="flex flex-col mt-10 gap-4 text-white">
       <li><a class="font-semibold hover:text-green-600" href="Index.html">Home</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="About.html">About Us</a></li>
       <li><a class="font-semibold hover:text-green-600" href="Pricing.html">Pricing</a></li>
       <li><a class="font-semibold hover:text-green-600" href="Blog.html">Blog</a></li>
       <li><a class="font-semibold hover:text-green-600" href="Contact.html">Contact</a></li>
@@ -101,21 +103,47 @@
   </div>
 
 
-  <div class="cta-section mt-12 text-center">
+  <div class="cta-section my-12 text-center">
     <h2 class="text-2xl font-bold mb-4">Ready to Find Your Dream Home?</h2>
     <a href="/Pricing.html" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700">View Listings</a>
   </div>
 
 
-  <div class="px-[100px] mt-6">
-    <h3 class="text-lg font-bold">Follow Us</h3>
-    <div class="flex space-x-4">
-      <a href="#" class="text-blue-500"><i class="fa fa-facebook fa-2x"></i></a>
-      <a href="#" class="text-blue-500"><i class="fa fa-twitter fa-2x"></i></a>
-      <a href="#" class="text-blue-500"><i class="fa fa-instagram fa-2x"></i></a>
-      <a href="#" class="text-blue-500"><i class="fa fa-linkedin fa-2x"></i></a>
+  <footer class="bg-blue-500 md:px-[100px] py-[30px] rounded-t-[80px] max-md:px-[70px]">
+
+    <div class="flex justify-between text-white max-md:flex-col max-md:gap-8 max-md:">
+
+      <div class="flex flex-col">
+        <h1 class="text-2xl font-bold">SKY ESTATE</h1>
+        <p class="max-w-[500px]">Sky Estate is a trusted real estate firm offering a wide range of properties across the   continent. We specialize in residential, commercial, and investment properties, ensuring   personalized service and expert guidance.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-lg"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="text-lg"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="text-lg"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="text-lg"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <h1 class="text-2xl font-bold">Quick Links</h1>
+        <a href="">About Us</a>
+        <a href="">Services</a>
+        <a href="">Pricing</a>
+        <a href="">Privacy Policy</a>
+      </div>
+
+      <div class="flex flex-col">
+        <h1 class="text-2xl font-bold">Contact Us</h1>
+        <p class="">123 Main Street, Suite 200, [City, State, Zip]</p>
+        <p class="">Phone: (123) 456-7890</p>
+        <p class="">Email: info@realestate.com</p>
+      </div>
     </div>
-  </div>
+
+    <div class="text-center text-white mt-16">
+      <h1> &copy; Copyright 2024 Sky Estate. All rights reserved.</h1>
+    </div>
+   </footer>
 
   
   <script src="Script.js"></script>

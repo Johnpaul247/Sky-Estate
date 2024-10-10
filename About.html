@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky estate about page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR FOR DESKTOP -->
+  <nav class="flex justify-between md:px-[100px] md:py-[30px] max-md:hidden">
+    <a class="text-2xl font-bold text-blue-500" href="Index.html">SKY ESTATE</a>
+    <ul class="flex gap-8">
+      <li><a class="font-semibold hover:text-blue-600" href="Index.html">Home</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="About.html">About Us</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Pricing.html">Pricing</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Blog.html">Blog</a></li>
+      <li><a class="font-semibold hover:text-blue-600" href="Contact.html">Contact</a></li>
+    </ul>
+    <button class="p-2 rounded-lg bg-blue-600 text-white font-semibold"><a href="/Pricing.html">Get Started</a></button>
+   </nav>
+
+   <!-- NAVIGATION BAR FOR MOBILE -->
+    <nav class="flex justify-between py-[20px] px-[10px] md:hidden">
+      <a class="font-bold text-2xl text-blue-500" href="Index.html">SKY ESTATE</a>
+      <div class="relative">
+        <button onclick="toggleMenu()" class="text-2xl font-semibold text-blue-500"><i class="fa fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR FOR MOBILE -->
+     <div id="menu" class="fixed top-0 right-0 h-[100vh] w-full px-4 transform translate-x-full transition-transform duration-300 md:hidden z-50 bg-blue-600 text-white">
+      <button onclick="toggleMenu()" class="absolute top-4 right-4 font-semibold text-3xl">&times;</button>
+      <ul class="flex flex-col mt-10 gap-4 text-white">
+        <li><a class="font-semibold hover:text-green-600" href="Index.html">Home</a></li>
+        <li><a class="font-semibold hover:text-blue-600" href="About.html">About Us</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Pricing.html">Pricing</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Blog.html">Blog</a></li>
+        <li><a class="font-semibold hover:text-green-600" href="Contact.html">Contact</a></li>
+      </ul>
+     </div>
+
+
+     <div class="bg-[url('/Img/house0.jpeg')] md:mx-32 rounded-3xl bg-cover bg-no-repeat flex justify-center p-32 max-md:w-full">
+      <h1 class="text-3xl font-bold max-md:text-white">Helping you find the perfect home with integrity and expertise.</h1>
+     </div>
+
+
+     <div class="flex justify-between my-16 gap-16 max-md:flex-wrap">
+
+      <div>
+        <img class="rounded-e-[100px] w-[500px]" src="/Img/house1.jpeg" alt="">
+      </div>
+
+      <div class="flex flex-col gap-2 mt-16">
+        <h1 class="text-center text-2xl font-bold">ABOUT SKY ESTATE</h1>
+        <p class="max-w-[600px] text-center">At Sky Estate, we are committed to making your real estate journey smooth and successful. With over 20 years of experience in the local market, we specialize in helping clients buy, sell, and manage properties with personalized service tailored to your needs.</p>
+        <button class="bg-blue-500 p-2 rounded-lg md:w-fit text-white text-center items-center justify-center max-md:mx-[40px]">Get Started</button>
+      </div>
+
+      <div>
+        <img class="max-md:mt-16 mt-32 rounded-s-[100px] w-[500px]" src="/Img/house5.jpeg" alt="">
+      </div>
+     </div>
+
+     <div class="bg-[url('/Img/house1.jpeg')] bg-no-repeat bg-cover p-16 mb-16 md:mx-[150px] rounded-3xl max-md:w-full">
+      <p class="font-bold text-lg text-white">Founded in 2005 by JAYPEE, Sky Estate began with a single office in Owerri, dedicated to offering personalized service and a deep understanding of the local real estate market. Today, we have grown to a team of 50 agents across three offices, helping clients all over country.</p>
+     </div>
+  
+
+     <!-- <div class="flex justify-between mx-[120px] gap-16">
+      <div>
+        <img class="w-[300px]" src="/Img/house2.jpeg" alt="">
+      </div>
+      <div class="flex flex-col gap-2">
+        <h1 class="font-bold text-center text-2xl">OUR MISSION</h1>
+        <p class="max-w-[500px] text-center">Our mission is to provide our clients with honest, reliable real estate services that exceed expectations. We aim to build lifelong relationships by offering expert advice, personalized support, and seamless transactions.</p>
+
+        <h1 class="font-bold text-center text-2xl mt-4">OUR VISION</h1>
+        <p class="max-w-[500px] text-center">ur vision is to be the most trusted and innovative real estate firm in [Region Name], known for our dedication to our clients and our commitment to modern real estate solutions.</p>
+      </div>
+     </div> -->
+
+
+     <div class="my-16 md:mx-[100px] max-md:mx-[20px]">
+      <h1 class="text-center font-bold text-2xl">CLIENTS TESTIMONIALS</h1>
+
+      <div id="clients-testimonial" class="grid grid-cols-4 gap-8 mt-8 max-md:grid-cols-1">
+        <div class="flex flex-col gap-2 border border-gray-200 shadow-xl rounded-lg p-2">
+          <p>Working with Sky Estate was the best decision we made! Our agent was knowledgeable, patient, and really understood what we were looking for. We found our dream home in no time</p>
+          <h1>"John Doe"</h1>
+        </div>
+
+        <div class="flex flex-col gap-2 border border-gray-200 shadow-xl rounded-lg p-2">
+          <p>Working with Sky Estate was the best decision we made! Our agent was knowledgeable, patient, and really understood what we were looking for. We found our dream home in no time</p>
+          <h1>"John Doe"</h1>
+        </div>
+
+        <div class="flex flex-col gap-2 border border-gray-200 shadow-xl rounded-lg p-2">
+          <p>Working with Sky Estate was the best decision we made! Our agent was knowledgeable, patient, and really understood what we were looking for. We found our dream home in no time</p>
+          <h1>"John Doe"</h1>
+        </div>
+
+        <div class="flex flex-col gap-2 border border-gray-200 shadow-xl rounded-lg p-2">
+          <p>Working with Sky Estate was the best decision we made! Our agent was knowledgeable, patient, and really understood what we were looking for. We found our dream home in no time</p>
+          <h1>"John Doe"</h1>
+        </div>
+
+        
+      </div>
+     </div>
+
+
+     <!-- FOOTER -->
+     <footer class="bg-blue-500 md:px-[100px] py-[30px] rounded-t-[80px] max-md:px-[70px]">
+
+      <div class="flex justify-between text-white max-md:flex-col max-md:gap-8 max-md:">
+
+        <div class="flex flex-col">
+          <h1 class="text-2xl font-bold">SKY ESTATE</h1>
+          <p class="max-w-[500px]">Sky Estate is a trusted real estate firm offering a wide range of properties across the   continent. We specialize in residential, commercial, and investment properties, ensuring   personalized service and expert guidance.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-lg"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="text-lg"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="text-lg"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="text-lg"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h1 class="text-2xl font-bold">Quick Links</h1>
+          <a href="">About Us</a>
+          <a href="">Services</a>
+          <a href="">Pricing</a>
+          <a href="">Privacy Policy</a>
+        </div>
+
+        <div class="flex flex-col">
+          <h1 class="text-2xl font-bold">Contact Us</h1>
+          <p class="">123 Main Street, Suite 200, [City, State, Zip]</p>
+          <p class="">Phone: (123) 456-7890</p>
+          <p class="">Email: info@realestate.com</p>
+        </div>
+      </div>
+
+      <div class="text-center text-white mt-16">
+        <h1> &copy; Copyright 2024 Sky Estate. All rights reserved.</h1>
+      </div>
+     </footer>
+
+  <script src="/Script.js"></script>
+</body>
+</html>

@@ -25,7 +25,7 @@ function display(cards) {
   const cardMenu = document.getElementById("card-menu");
 
   const cardElements = cards.map(card => 
-    `<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+    `<div data-aos="zoom-in" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
       <img src=${card.image} alt="image" class="w-[350px] object-cover"/>
     </div>`
   ).join('');  // Use an empty string to avoid commas between elements
@@ -126,7 +126,7 @@ function investment(cards){
   const investmentContainer = document.getElementById("investment-container");
 
   const cardElements = cards.map(card =>
-    ` <div class="flex flex-col gap-4 text-center">
+    ` <div data-aos="zoom-in" class="flex flex-col gap-4 text-center">
         <h1 class="bg-blue-100 w-[60px] py-4 rounded-full text-blue-500 font-bold text-2xl ml-[92px] max-md:ml-[150px]">${card.stage}</h1>
         <h1 class"font-bold text-xl">${card.title}</h1>
         <h1>${card.description}</h1>
@@ -136,3 +136,45 @@ function investment(cards){
   investmentContainer.innerHTML = cardElements;
 }
 investment(stageList)
+
+
+
+// CLIENTS TESTIMONIALS
+const clientList = [
+  {
+    comment: "Working with Sky Estate was the best decision we made! Our agent was knowledgeable, patient, and really understood what we were looking for. We found our dream home in no time",
+    name: "John Doe",
+  },
+
+  {
+    comment: "Sky Estate made the buying process stress-free! Highly recommend their services.",
+    name: "Jane Smith",
+  },
+
+  {
+    comment: "Our agent from Sky Estate went above and beyond to find us the perfect home.",
+    name: "Angel Reeves",
+  },
+
+  {
+    comment: "Best real estate experience we've ever had! Thank you, Sky Estate",
+    name: "Sabrina Capenter",
+  },
+]
+
+function testimonial(cards) {
+  const clientsTestimonial = document.getElementById('clients-testimonial');
+
+  const cardElements = cards.map(card =>
+    `<div class="flex flex-col gap-2 border border-gray-200 shadow-xl rounded-lg p-2">
+          <p>${card.comment}</p>
+          <h1>${card.name}</h1>
+        </div>`
+  ).join(``);
+
+  clientsTestimonial.innerHTML = cardElements;
+}
+
+testimonial(clientList);
+
+console.log('testimonial(clientList)');
